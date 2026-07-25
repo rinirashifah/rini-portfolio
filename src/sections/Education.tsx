@@ -1,9 +1,8 @@
 export default function Education() {
   return (
-    <div className="card">
-      <div className="section-eyebrow">Pendidikan</div>
-      <h2 className="section-heading">Riwayat Pendidikan</h2>
-      <div className="edu-list">
+    <div className="about-section" style={{ marginTop: "16px" }}>
+      <div className="about-card">
+        <div className="about-card-label">Pendidikan</div>
         <div className="edu-item">
           <div className="edu-dot" />
           <div>
@@ -20,6 +19,13 @@ export default function Education() {
           </div>
           <div className="edu-year">2019 – 2022</div>
         </div>
+      </div>
+
+      <div className="about-card">
+        <div className="about-card-label">Lokasi</div>
+        <p className="about-card-text" style={{ fontSize: "22px", fontWeight: 700, fontFamily: "var(--font-display)", letterSpacing: "-0.5px" }}>
+          Bandung,<br />Jawa Barat 🇮🇩
+        </p>
       </div>
     </div>
   );

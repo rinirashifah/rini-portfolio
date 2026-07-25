@@ -7,7 +7,7 @@ const certs = [
 
 export default function Certification() {
   return (
-    <div className="card">
+    <div className="section-block">
       <div className="section-eyebrow">Sertifikasi</div>
       <h2 className="section-heading">Pelatihan &amp; Sertifikasi</h2>
       <div className="cert-list">

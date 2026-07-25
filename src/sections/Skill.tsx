@@ -1,26 +1,22 @@
-const skills = [
-  "Flutter (Dart)",
-  "Supabase",
-  "Firebase",
-  "Google Workspace",
-  "Notion",
-  "Scratch",
-  "Arduino",
-  "ESP32 / Wemos",
-  "Android Development",
-  "React",
-  "Typescript",
-];
+const stack = {
+  Languages: ["Dart", "JavaScript", "TypeScript", "Golang"],
+  Frontend: ["Flutter", "React.js", "React Native", "TailwindCSS"],
+  Tools: ["Supabase", "Firebase", "SQLite", "Git / Github"],
+};
 
 export default function Skill() {
   return (
-    <div className="card">
-      <div className="section-eyebrow">Keahlian</div>
-      <h2 className="section-heading">Tech Stack</h2>
-      <div className="skills-grid">
-        {skills.map((s) => (
-          <div key={s} className="skill-chip">
-            {s}
+    <div className="stack-section">
+      <div className="stack-title">Engineering Stack</div>
+      <div className="stack-cols">
+        {Object.entries(stack).map(([label, items]) => (
+          <div key={label} className="stack-col">
+            <div className="stack-col-label">{label}</div>
+            <ul>
+              {items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
