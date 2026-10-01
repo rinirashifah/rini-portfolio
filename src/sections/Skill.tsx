@@ -12,19 +12,19 @@ const skillCategories: SkillCategory[] = [
     title: 'Languages',
     icon: '💻',
     badgeColor: 'border-[#e91e8c]/30 bg-[#e91e8c]/[0.08] text-[#880e4f] dark:text-[#ff85c8] dark:bg-[#e91e8c]/15',
-    items: ['Golang', 'Dart', 'JavaScript', 'Python', 'C / C++', 'SQL'],
+    items: ['Python', 'Golang', 'Dart', 'JavaScript', 'SQL', 'C / C++'],
   },
   {
-    title: 'Web & Mobile',
+    title: 'Web & Enterprise',
     icon: '🚀',
     badgeColor: 'border-[#0891b2]/30 bg-[#0891b2]/[0.08] text-[#0e7490] dark:text-[#67e8f9] dark:bg-[#0891b2]/15',
-    items: ['React.js', 'Next.js 14', 'Flutter', 'Laravel', 'REST API', 'Tailwind CSS'],
+    items: ['Odoo ERP', 'React.js', 'Next.js 14', 'Flutter', 'Laravel', 'REST API', 'Tailwind CSS'],
   },
   {
     title: 'Data & Tools',
     icon: '📊',
     badgeColor: 'border-[#b8860b]/30 bg-[#ffd700]/[0.12] text-[#854d0e] dark:text-[#fde047] dark:bg-[#ffd700]/15',
-    items: ['Machine Learning', 'Data Analysis', 'Git / GitHub', 'Supabase / Firebase', 'Arduino / ESP32'],
+    items: ['Machine Learning', 'Data Analysis', 'PostgreSQL', 'Git / GitHub', 'Supabase / Firebase', 'Arduino / ESP32'],
   },
 ];
 

@@ -43,6 +43,20 @@ const UJIAN_IMAGES: SlideImage[] = [
   { url: '/projects/ujian/ujian-6.png', caption: 'Rekapitulasi Hasil & Nilai Siswa Otomatis' },
 ];
 
+/**
+ * Slide tangkapan layar aplikasi Inventory Management berbasis Odoo & Python
+ */
+const ODOO_IMAGES: SlideImage[] = [
+  { url: '/projects/odoo/odoo-1.png', caption: 'Daftar Produk & Indikator Status Stok (Low Stock Alert)' },
+  { url: '/projects/odoo/odoo-2.png', caption: 'Katalog Produk dengan Kategori, Satuan, dan Harga Beli/Jual' },
+  { url: '/projects/odoo/odoo-3.png', caption: 'Status Stok Normal setelah Pembaruan Stok Masuk' },
+  { url: '/projects/odoo/odoo-4.png', caption: 'Tampilan Filter & Pencarian Data Produk' },
+  { url: '/projects/odoo/odoo-5.png', caption: 'Modul Transaksi Stock In (Pencatatan Barang Masuk dari Supplier)' },
+  { url: '/projects/odoo/odoo-6.png', caption: 'Modul Transaksi Stock Out (Pencatatan Barang Keluar ke Pelanggan)' },
+  { url: '/projects/odoo/odoo-7.png', caption: 'Formulir Stock Out dengan Validasi Stok Tersedia Real-time' },
+  { url: '/projects/odoo/odoo-8.png', caption: 'Laporan Pergerakan Stok (Stock Movement Audit Trail & History)' },
+];
+
 export const EXPERIENCE: CardItem[] = [
   {
     key: 'bkad',
@@ -131,6 +145,29 @@ export const EXPERIENCE: CardItem[] = [
 ];
 
 export const PROJECTS: CardItem[] = [
+  {
+    key: 'odoo-inventory',
+    tags: [
+      { label: 'Odoo', color: 'pink' },
+      { label: 'Python', color: 'gold' },
+      { label: 'PostgreSQL', color: 'sky' },
+      { label: 'ERP / Inventory', color: 'green' },
+    ],
+    name: 'Aplikasi Sederhana Inventory Management',
+    org: 'Odoo Custom Module · Personal Project',
+    period: '2026',
+    desc: 'Sistem manajemen inventaris berbasis Odoo & Python untuk pencatatan produk, transaksi barang masuk (Stock In), barang keluar (Stock Out), serta audit log pergerakan stok real-time.',
+    bullets: [
+      'Merancang dan membangun modul custom Inventory Management pada platform Odoo menggunakan bahasa pemrograman Python dan database PostgreSQL.',
+      'Mengimplementasikan fitur katalog produk dengan kategorisasi, penetapan harga beli/jual, serta penentuan batas minimum stok otomatis.',
+      'Membangun sistem peringatan dini (Low Stock Alert) untuk memonitor ketersediaan stok barang secara visual dan otomatis.',
+      'Menyediakan alur kerja transaksi Stock In (Barang Masuk) dan Stock Out (Barang Keluar) dengan validasi ketersediaan stok real-time guna mencegah minus stok.',
+      'Menyusun modul pelaporan Stock Movement untuk merekam riwayat pergerakan stok (audit trail) secara transparan dan terstruktur.',
+    ],
+    images: ODOO_IMAGES,
+    links: [],
+    wide: true,
+  },
   {
     key: 'gis',
     tags: [

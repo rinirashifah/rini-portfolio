@@ -9,6 +9,7 @@ interface CardGridProps {
 
 function getProjectIcon(key: string, name: string): string {
   const k = (key + ' ' + name).toLowerCase();
+  if (k.includes('odoo') || k.includes('inventory') || k.includes('stok') || k.includes('gudang')) return '📦';
   if (k.includes('gis') || k.includes('bkad') || k.includes('map')) return '🗺️';
   if (k.includes('perpus') || k.includes('buku') || k.includes('library')) return '📚';
   if (k.includes('ujian') || k.includes('exam')) return '📝';

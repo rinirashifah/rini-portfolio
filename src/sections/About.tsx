@@ -17,7 +17,7 @@ export default function About() {
             <span>Ringkasan Profil</span>
           </div>
           <p className="text-[14px] leading-[1.85] text-[#55163e] transition-colors duration-300 dark:text-[#f5c7e1] sm:text-[15px]">
-            Lulusan <strong className="font-bold text-[#c2185b] dark:text-[#ff85c8]">Teknik Informatika Universitas Langlangbuana</strong> dengan kompetensi dalam pengembangan web (<span className="font-semibold text-[#880e4f] dark:text-[#ffd700]">React.js, Next.js, Laravel, Golang</span>), mobile (<span className="font-semibold text-[#880e4f] dark:text-[#ffd700]">Flutter</span>), REST API, dan analisis data / machine learning menggunakan Python. Berpengalaman merancang, mengembangkan, dan mengimplementasikan aplikasi sesuai kebutuhan pengguna dengan memperhatikan kualitas, kebersihan kode, serta efisiensi sistem. Didukung kemampuan adaptasi yang cepat, pemecahan masalah secara terstruktur, komunikasi yang baik, dan pola pikir analitis.
+            Lulusan <strong className="font-bold text-[#c2185b] dark:text-[#ff85c8]">Teknik Informatika Universitas Langlangbuana</strong> dengan kompetensi dalam pengembangan web & enterprise (<span className="font-semibold text-[#880e4f] dark:text-[#ffd700]">React.js, Next.js, Laravel, Golang, Odoo ERP</span>), mobile (<span className="font-semibold text-[#880e4f] dark:text-[#ffd700]">Flutter</span>), REST API, serta pemrograman Python & machine learning. Berpengalaman merancang, mengembangkan, dan mengimplementasikan aplikasi sesuai kebutuhan pengguna dengan memperhatikan kualitas, kebersihan kode, serta efisiensi sistem. Didukung kemampuan adaptasi yang cepat, pemecahan masalah secara terstruktur, komunikasi yang baik, dan pola pikir analitis.
           </p>
         </div>
 
