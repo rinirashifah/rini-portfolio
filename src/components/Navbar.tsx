@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 interface NavbarProps {
   theme: 'dark' | 'light';
   onToggle: () => void;
+  onReplayLoading?: () => void;
 }
 
 const NAV_ITEMS = [
@@ -14,7 +15,7 @@ const NAV_ITEMS = [
   { label: 'Contact', href: '#contact', icon: '📬' },
 ];
 
-export default function Navbar({ theme, onToggle }: NavbarProps) {
+export default function Navbar({ theme, onToggle, onReplayLoading }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -68,6 +69,19 @@ export default function Navbar({ theme, onToggle }: NavbarProps) {
               ))}
             </div>
 
+            {/* Replay Loading Button */}
+            {onReplayLoading && (
+              <button
+                type="button"
+                onClick={onReplayLoading}
+                title="Lihat Animasi Loading"
+                className="flex h-9 items-center justify-center gap-1.5 rounded-full border border-white/30 bg-white/15 px-2.5 text-[11px] font-bold text-white shadow-xs transition-transform hover:scale-105 hover:bg-white/25 active:scale-95 sm:h-10 sm:px-3 sm:text-xs"
+              >
+                <span>❤️</span>
+                <span className="hidden sm:inline">Intro</span>
+              </button>
+            )}
+
             {/* Dark / Light Mode Toggle Button */}
             <button
               type="button"
@@ -114,6 +128,20 @@ export default function Navbar({ theme, onToggle }: NavbarProps) {
                 <span>{item.label}</span>
               </a>
             ))}
+
+            {onReplayLoading && (
+              <button
+                type="button"
+                onClick={() => {
+                  setOpen(false);
+                  onReplayLoading();
+                }}
+                className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-white/20 py-2.5 text-[14px] font-bold text-white shadow-xs"
+              >
+                <span>❤️</span>
+                <span>Lihat Animasi Loading</span>
+              </button>
+            )}
           </div>
         </div>
       </nav>

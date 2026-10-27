@@ -196,7 +196,22 @@ export default function Modal({ item, onClose }: ModalProps) {
             {item.name}
           </h2>
           <div className="mb-1 text-[13.5px] font-bold text-[#c2185b] dark:text-[#ff85c8]">{item.org}</div>
-          <div className="mb-4 text-[12px] font-semibold text-[#8b1a5e] dark:text-[#f3c2de]">✦ {item.period}</div>
+          <div className="mb-2 text-[12px] font-semibold text-[#8b1a5e] dark:text-[#f3c2de]">✦ {item.period}</div>
+
+          {/* Highlights in Modal */}
+          {item.highlights && item.highlights.length > 0 && (
+            <div className="mb-4 flex flex-wrap gap-1.5 sm:gap-2">
+              {item.highlights.map((h, i) => (
+                <span
+                  key={h}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[#f5e3d3] bg-[#fdf6f0] px-3 py-1 text-[11px] font-bold text-[#5c3e32] dark:border-pink-900/40 dark:bg-[#22071d] dark:text-[#f8bbd9]"
+                >
+                  <span>{i === 0 ? '🛡️' : i === 1 ? '🗺️' : i === 2 ? '⚡' : '✦'}</span>
+                  <span>{h}</span>
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="mx-5 h-[1.5px] sm:mx-6" style={{ background: 'linear-gradient(90deg,transparent,#e91e8c,#ffd700,transparent)' }} />

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './index.css';
 import Glitter from './components/Glitter';
 import Navbar from './components/Navbar';
+import LoadingScreen from './components/LoadingScreen';
 import Hero from './sections/Hero';
 import Experience from './sections/Experience';
 import Project from './sections/Project';
@@ -14,6 +15,7 @@ import { CardItem } from './types';
 export default function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [activeModal, setActiveModal] = useState<CardItem | null>(null);
+  const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -35,8 +37,16 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#fff0f7] text-[#3d0030] transition-colors duration-300 dark:bg-[#0a0008] dark:text-[#fff0f7]">
+      {/* Retro Candy Pink Loading Screen from Image 2 */}
+      {showLoading && (
+        <LoadingScreen
+          show={showLoading}
+          onFinish={() => setShowLoading(false)}
+        />
+      )}
+
       <Glitter />
-      <Navbar theme={theme} onToggle={toggle} />
+      <Navbar theme={theme} onToggle={toggle} onReplayLoading={() => setShowLoading(true)} />
 
       <main className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pb-16 pt-[calc(56px+env(safe-area-inset-top))] sm:px-6 sm:pb-20 sm:pt-[72px] lg:px-10">
         <Hero />
@@ -86,7 +96,7 @@ export default function App() {
         </div>
 
         <div className="mt-5 text-[12px] font-medium text-white/70">
-          © 2026 Rini Rashifah · Built with 💖 & Precision
+          © 2026 Rini Rashifah 
         </div>
       </footer>
 
